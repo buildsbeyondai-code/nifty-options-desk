@@ -20,7 +20,31 @@ Coming to the Microsoft Store (product `9PB1WM53L3JR`).
   target, stop, trail or time, with capital, win rate and profit after Zerodha-style charges.
 - Market time: how much of the session had a trade worth buying and how much was a wait.
 - Accuracy and learning: the rules tune themselves slowly after enough closed trades.
+- **Paper | Real** switch in the header, next to the theme buttons: every tab (trades, closed, capital, win rate,
+  charges, accuracy) shows either paper trades or your real Kite trades.
 - Optional Zerodha Kite Connect data source with your own keys. Light and dark themes.
+
+## Real trades with Zerodha Kite (personal build only)
+
+The developer's own build can copy the app's auto picks into a Zerodha Kite account through Zerodha's hosted Kite
+MCP. **This is not in the Microsoft Store app**, which never places orders.
+
+- Off by default. You sign in to Kite yourself, and Kite asks you to approve each order unless you allow it there.
+  The app never approves anything for you.
+- Right after a buy fills, the target and the stop-loss are set in Kite as one GTT (OCO): when one fires, Kite
+  cancels the other, so the trade is protected even when the app is closed.
+- Separate real capital and daily limits (lots per trade, buys per day, stop for the day at a loss). A buy that
+  needs more than the free real capital is skipped.
+- It only ever sells what Kite shows you hold, and removes its GTT before any sell of its own, so it never sells
+  short.
+
+![Real view: closed trades](docs/screenshots/07-real-closed.png)
+
+| | |
+|---|---|
+| ![Real view: accuracy](docs/screenshots/08-real-accuracy.png) | ![Real trades tab](docs/screenshots/09-real-trades-tab.png) |
+
+_Real-view screenshots use made-up demo trades, not a real account._
 
 | | |
 |---|---|
@@ -30,7 +54,8 @@ Coming to the Microsoft Store (product `9PB1WM53L3JR`).
 ## Honest by design
 
 - Chances shown are what today's option prices imply, not a forecast. A bought option can lose all of its premium.
-- The app never places orders and needs no account. Your trades, settings and optional Kite keys stay on your PC.
+- The Microsoft Store app never places orders and needs no account. Your trades, settings and optional Kite keys
+  stay on your PC.
 - It names itself honestly to NSE; it never pretends to be a web browser.
 
 ## Privacy

@@ -1,9 +1,9 @@
 # Privacy Policy — Nifty Options Desk
 
-_Last updated: 2026-11-16_
+_Last updated: 2026-11-19_
 
 Nifty Options Desk ("the app") is a free desktop app published by Jude Finney (buildsbeyondAI). This policy covers
-the Microsoft Store app.
+the Microsoft Store app. The Store app cannot place orders or connect to a trading account.
 
 ## What the app collects
 
